@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:26:25 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 00:45:08 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:13:17 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int	ft_print_s(const char *str)
 		tot += write (1, &str[i], 1);
 		i++;
 	}
+	return (tot);
 }

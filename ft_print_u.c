@@ -6,12 +6,11 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:58:16 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 00:46:01 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:14:36 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-#include <stdio.h>
 
 int	ft_print_u(unsigned int nb)
 {
@@ -40,5 +39,5 @@ int	ft_print_u(unsigned int nb)
 		tot += write(1, &s[j], 1);
 		j--;
 	}
-	result (tot);
+	return (tot);
 }

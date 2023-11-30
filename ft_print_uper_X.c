@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:43:53 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 00:47:03 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:19:25 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	hex_helper(size_t nb)
 	int		f;
 	int		h;
 	char	*hex;
-	int		arr[6];
+	size_t	arr[6];
 
 	hex = "ABCDEF";
 	h = 10;

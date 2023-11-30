@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:34:12 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 00:43:49 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:19:55 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	hex_helper(size_t nb)
 	int		f;
 	int		h;
 	char	*hex;
-	int		arr[6];
+	size_t	arr[6];
 
 	hex = "abcdef";
 	h = 10;
@@ -48,6 +48,7 @@ int	ft_print_p(void *adress)
 	char		str[13];
 	int			tot;
 
+	tot = 0;
 	nb = (size_t)adress;
 	index1 = 0;
 	index2 = 0;
@@ -65,9 +66,4 @@ int	ft_print_p(void *adress)
 		index1--;
 	}
 	return (tot);
-}
-int main()
-{
-	char c = 'a';
-	ft_print_p(&c);
 }

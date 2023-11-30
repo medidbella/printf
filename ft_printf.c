@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 19:58:26 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:10:51 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 01:18:13 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int print_helper(char spec, va_list ap)
 {
 	int result;
 
-	return = 0;
+	result = 0;
 	if (spec == 'c')
 		result += ft_print_c(va_arg(ap, int));
 	else if (spec == 'd')
@@ -32,7 +32,7 @@ static int print_helper(char spec, va_list ap)
 	else if (spec == 'X')
 		result += ft_print_uper_X(va_arg(ap, int));
 	else if (spec == '%')
-		result += ft_print_percent(va_arg(ap, int));
+		result += ft_print_c('%');
 	return (result);
 }
 
@@ -48,7 +48,7 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			result  = result + prit_helper(format[i + 1], ap);
+			result  = result + print_helper(format[i + 1], ap);
 		else
 			result = result + write(1, &format[i], 1);
 	}
