@@ -6,11 +6,11 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:32:32 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 11:59:48 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:21:26 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_print_d(int nb)
 {

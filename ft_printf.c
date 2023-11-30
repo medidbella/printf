@@ -6,11 +6,12 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 19:58:26 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 12:04:37 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 14:08:22 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
+#include <stdio.h>
 
 static int	print_helper(char spec, va_list ap)
 {
@@ -20,7 +21,7 @@ static int	print_helper(char spec, va_list ap)
 	if (spec == 'c')
 		result += ft_print_c(va_arg(ap, int));
 	else if (spec == 'd')
-		result += ft_print_c(va_arg(ap, int));
+		result += ft_print_d(va_arg(ap, int));
 	else if (spec == 's')
 		result += ft_print_s(va_arg(ap, char *));
 	else if (spec == 'x')
@@ -30,7 +31,7 @@ static int	print_helper(char spec, va_list ap)
 	else if (spec == 'p')
 		result += ft_print_p(va_arg(ap, void *));
 	else if (spec == 'X')
-		result += ft_print_uper_X(va_arg(ap, int));
+		result += ft_print_uper_x(va_arg(ap, int));
 	else if (spec == '%')
 		result += ft_print_c('%');
 	return (result);
@@ -48,7 +49,10 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			result = result + print_helper(format[i], ap);
+		{
+			result = result + print_helper(format[i + 1], ap);
+			i++;
+		}
 		else
 			result = result + write(1, &format[i], 1);
 		i++;

@@ -6,11 +6,11 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:34:12 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:19:55 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:50:49 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static size_t	hex_helper(size_t nb)
 {
@@ -52,7 +52,7 @@ int	ft_print_p(void *adress)
 	nb = (size_t)adress;
 	index1 = 0;
 	index2 = 0;
-	write(1, "0x", 2);
+	tot += write(1, "0x", 2);
 	while (nb >= 16)
 	{
 		str[index1] = hex_helper(nb % 16);
