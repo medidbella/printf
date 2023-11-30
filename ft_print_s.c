@@ -6,20 +6,22 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:26:25 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/29 18:54:27 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 00:45:08 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_print_s(const char *str)
+int	ft_print_s(const char *str)
 {
 	int	i;
+	int tot;
 
+	tot = 0;
 	i = 0;
 	while (str[i])
 	{
-		write (1, &str[i], 1);
+		tot += write (1, &str[i], 1);
 		i++;
 	}
 }

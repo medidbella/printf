@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:34:12 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/29 22:38:01 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 00:43:49 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,13 @@ static size_t	hex_helper(size_t nb)
 		return (nb + 48);
 }
 
-void	ft_print_p(void *adress)
+int	ft_print_p(void *adress)
 {
 	size_t		nb;
 	int			index1;
 	int			index2;
 	char		str[13];
+	int			tot;
 
 	nb = (size_t)adress;
 	index1 = 0;
@@ -60,7 +61,13 @@ void	ft_print_p(void *adress)
 	str[index1] = hex_helper(nb);
 	while (index1 >= 0)
 	{
-		write(1, &str[index1], 1);
+		tot += write(1, &str[index1], 1);
 		index1--;
 	}
+	return (tot);
+}
+int main()
+{
+	char c = 'a';
+	ft_print_p(&c);
 }

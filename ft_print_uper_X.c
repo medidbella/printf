@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:43:53 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/29 22:02:34 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 00:47:03 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,15 @@ static size_t	hex_helper(size_t nb)
 		return (nb + 48);
 }
 
-void ft_print_uper_X(unsigned int nb)
+int	ft_print_uper_X(unsigned int nb)
 {
 	int			index1;
 	int			index2;
 	char		str[13];
+	int			tot;
 
+
+	tot = 0;
 	index1 = 0;
 	index2 = 0;
 	while (nb >= 16)
@@ -57,7 +60,8 @@ void ft_print_uper_X(unsigned int nb)
 	str[index1] = hex_helper(nb);
 	while (index1 >= 0)
 	{
-		write(1, &str[index1], 1);
+		tot += write(1, &str[index1], 1);
 		index1--;
 	}
+	return (tot);
 }
