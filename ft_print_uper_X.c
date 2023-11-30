@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:43:53 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:19:25 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:01:28 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ static size_t	hex_helper(size_t nb)
 		return (nb + 48);
 }
 
-int	ft_print_uper_X(unsigned int nb)
+int	ft_print_uper_x(unsigned int nb)
 {
 	int			index1;
 	int			index2;
 	char		str[13];
 	int			tot;
-
 
 	tot = 0;
 	index1 = 0;

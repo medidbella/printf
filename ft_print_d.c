@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:32:32 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 00:41:17 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 11:59:48 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_print_d(int nb)
 	long	n;
 	char	s[10];
 	int		j;
-	int tot;
+	int		tot;
 
 	tot = 0;
 	n = nb;
@@ -35,9 +35,6 @@ int	ft_print_d(int nb)
 	}
 	s[j] = n + 48;
 	while (j >= 0)
-	{
-		tot += write(1, &s[j], 1);
-		j--;
-	}
+		tot += write(1, &s[j--], 1);
 	return (tot);
 }

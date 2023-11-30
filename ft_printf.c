@@ -6,15 +6,15 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 19:58:26 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:18:13 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:04:37 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static int print_helper(char spec, va_list ap)
+static int	print_helper(char spec, va_list ap)
 {
-	int result;
+	int	result;
 
 	result = 0;
 	if (spec == 'c')
@@ -38,9 +38,9 @@ static int print_helper(char spec, va_list ap)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list ap;
-	int i;
-	int result;
+	va_list	ap;
+	int		i;
+	int		result;
 
 	va_start(ap, format);
 	result = 0;
@@ -48,9 +48,10 @@ int	ft_printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			result  = result + print_helper(format[i + 1], ap);
+			result = result + print_helper(format[i], ap);
 		else
 			result = result + write(1, &format[i], 1);
+		i++;
 	}
 	va_end(ap);
 	return (result);

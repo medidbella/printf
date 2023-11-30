@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:43:53 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:15:46 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:00:30 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ int	ft_print_lower_x(unsigned int nb)
 	int			index1;
 	int			index2;
 	char		str[13];
-	int 		tot;
-
+	int			tot;
 
 	tot = 0;
 	index1 = 0;

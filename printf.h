@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:00:54 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:09:15 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:03:51 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int	ft_print_d(int nb);
 int	ft_print_u(unsigned int nb);
 int	ft_print_lower_x(unsigned int nb);
 int	ft_print_uper_X(unsigned int nb);
+int	ft_printf(const char *format, ...);
 
 #endif

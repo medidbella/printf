@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:58:16 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 01:14:36 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:02:51 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,6 @@ int	ft_print_u(unsigned int nb)
 	}
 	s[j] = n + 48;
 	while (j >= 0)
-	{
-		tot += write(1, &s[j], 1);
-		j--;
-	}
+		tot += write(1, &s[j--], 1);
 	return (tot);
 }
