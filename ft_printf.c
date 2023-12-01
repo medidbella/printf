@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 19:58:26 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 14:08:22 by midbella         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:17:34 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static int	print_helper(char spec, va_list ap)
 		result += ft_print_uper_x(va_arg(ap, int));
 	else if (spec == '%')
 		result += ft_print_c('%');
+	else if (spec == 'u')
+		result += ft_print_u(va_arg(ap, int));
 	return (result);
 }
 

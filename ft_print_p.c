@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 12:34:12 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 12:50:49 by midbella         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:17:18 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_print_p(void *adress)
 	size_t		nb;
 	int			index1;
 	int			index2;
-	char		str[13];
+	char		str[16];
 	int			tot;
 
 	tot = 0;

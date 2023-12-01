@@ -6,7 +6,7 @@
 /*   By: midbella <midbella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 18:58:16 by midbella          #+#    #+#             */
-/*   Updated: 2023/11/30 12:21:44 by midbella         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:45:39 by midbella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ int	ft_print_u(unsigned int nb)
 
 	tot = 0;
 	n = nb;
-	if (n < 0)
-	{
-		tot += write(1, "-", 1);
-			n = n * -1;
-	}
 	j = 0;
 	while (n >= 10)
 	{
